@@ -43,6 +43,19 @@ public:
     bool game_is_over();
 };
 
+//---------------------------------------------------------------------
+class connect4_board : public Board {
+public:
+   connect4_board ();
+   bool update_board (int x, int y, char mark);               // Connect4 game
+   void display_board();                                      // Assignment 3, Problem 2
+   bool is_winner();
+   bool is_draw();
+   bool game_is_over();
+};
+//---------------------------------------------------------------------
+
+
 ///////////////////////////////////////////
 // This class represents a player who has
 // a name and a symbol to put on board
