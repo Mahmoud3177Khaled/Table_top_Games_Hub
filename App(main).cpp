@@ -1,4 +1,4 @@
-// Class definition for Pyramic_XO_App class
+// Class definition for Game App class
 // Author:  Tarek Mohamed
 // Date:    11/12/2023
 // Version: 2
