@@ -107,6 +107,16 @@ class RandomPlayer_c4: public Player {
         void get_move(int& x, int& y);
 };
 //---------------------------------------------------------------------------
+class X_O_Board : public Board {
+public:
+    X_O_Board();
+    bool update_board(int x, int y, char mark);
+    void display_board();
+    bool is_winner();                                               // Tic_Tac_Toe_5*5
+    bool is_draw();                                                 // Assignment 3, Game 3
+    bool game_is_over();
+    char get_winner();
+};
 
 
 ///////////////////////////////////////////
