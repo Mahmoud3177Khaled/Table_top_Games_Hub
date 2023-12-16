@@ -41,19 +41,32 @@ public:
     bool is_winner();
     bool is_draw();
     bool game_is_over();
+    ~Pyramic_X_O_Board();
+
 };
 
 //---------------------------------------------------------------------
 class connect4_board : public Board {
 public:
-   connect4_board ();
-   bool update_board (int x, int y, char mark);               // Connect4 game
-   void display_board();                                      // Assignment 3, Problem 2
-   bool is_winner();
-   bool is_draw();
-   bool game_is_over();
+    connect4_board();
+    bool update_board(int x, int y, char mark);               // Connect4 game
+    void display_board();                                      // Assignment 3, Problem 2
+    bool is_winner();
+    bool is_draw();
+    bool game_is_over();
 };
 //---------------------------------------------------------------------
+
+class X_O_Board : public Board {
+public:
+    X_O_Board();
+    bool update_board(int x, int y, char mark);
+    void display_board();
+    bool is_winner();                                               // Tic_Tac_Toe_5*5
+    bool is_draw();                                                 // Assignment 3, Game 3
+    bool game_is_over();
+    char get_winner();
+};
 
 
 ///////////////////////////////////////////
@@ -97,26 +110,16 @@ public:
 };
 
 //---------------------------------------------------------------------------
-class RandomPlayer_c4: public Player {
-    protected:
-        int dimension;
-    public:
-        // Take a symbol and pass it to parent                   // Connect4 game
-        RandomPlayer_c4 (char symbol, int dimension);           // Assignment 3, Problem 2
-        // Generate a random move
-        void get_move(int& x, int& y);
+class RandomPlayer_c4 : public Player {
+protected:
+    int dimension;
+public:
+    // Take a symbol and pass it to parent                   // Connect4 game
+    RandomPlayer_c4(char symbol, int dimension);           // Assignment 3, Problem 2
+    // Generate a random move
+    void get_move(int& x, int& y);
 };
 //---------------------------------------------------------------------------
-class X_O_Board : public Board {
-public:
-    X_O_Board();
-    bool update_board(int x, int y, char mark);
-    void display_board();
-    bool is_winner();                                               // Tic_Tac_Toe_5*5
-    bool is_draw();                                                 // Assignment 3, Game 3
-    bool game_is_over();
-    char get_winner();
-};
 
 
 ///////////////////////////////////////////

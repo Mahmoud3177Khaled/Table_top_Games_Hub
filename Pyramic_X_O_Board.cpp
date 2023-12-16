@@ -105,7 +105,14 @@ bool Pyramic_X_O_Board::game_is_over()
     return (n_moves >= 9);
 }
 
-
+Pyramic_X_O_Board::~Pyramic_X_O_Board()
+{
+    for (int i = 0; i < n_rows; i++)
+    {
+        delete[] board[i];
+    }
+    delete[] board;
+}
 
 /*
 X_O_Board::X_O_Board () {

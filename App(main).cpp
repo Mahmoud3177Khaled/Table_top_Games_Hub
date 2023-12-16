@@ -1,4 +1,4 @@
-// Class definition for Game App class
+// Class definition for Pyramic_XO_App class
 // Author:  Tarek Mohamed
 // Date:    11/12/2023
 // Version: 2
@@ -22,26 +22,37 @@ int main() {
     cout << "If you want to play with computer press 1 , else Press 2  : ";
     cin >> choice;
     cout << endl;
-    if (choice != 1)
-        players[1] = new Player(2, 'o');
-    else
-        //Player pointer points to child
-        players[1] = new RandomPlayer('o', 7);
+    
 
-
-    if(game == 1)
+    if (game == 1)  // pyramid X_O
     {
+        if (choice != 1)
+            players[1] = new Player(2, 'o');
+        else
+            players[1] = new RandomPlayer('o', 5);
+
         GameManager pyramid_x_o(new Pyramic_X_O_Board(), players);
         pyramid_x_o.run();
     }
-    else if(game == 2)
+    else if (game == 2)     // connect4
     {
+        if (choice != 1)
+            players[1] = new Player(2, 'o');
+        else
+            players[1] = new RandomPlayer('o', 7);
+
         GameManager c4_game(new connect4_board(), players);
         c4_game.run();
     }
-    else if(game == 3)
+    else if (game == 3)     // 5*5 X_O
     {
+        if (choice != 1)
+            players[1] = new Player(2, 'o');
+        else
+            players[1] = new RandomPlayer('o', 5);
 
+        GameManager x_o_game(new X_O_Board(), players);
+        x_o_game.run();
     }
     else
     {
