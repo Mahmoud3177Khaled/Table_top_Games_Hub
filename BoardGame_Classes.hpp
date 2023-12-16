@@ -96,6 +96,19 @@ public:
     void get_move(int& x, int& y);
 };
 
+//---------------------------------------------------------------------------
+class RandomPlayer_c4: public Player {
+    protected:
+        int dimension;
+    public:
+        // Take a symbol and pass it to parent                   // Connect4 game
+        RandomPlayer_c4 (char symbol, int dimension);           // Assignment 3, Problem 2
+        // Generate a random move
+        void get_move(int& x, int& y);
+};
+//---------------------------------------------------------------------------
+
+
 ///////////////////////////////////////////
 class GameManager {
 private:
