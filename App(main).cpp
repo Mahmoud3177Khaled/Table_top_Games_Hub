@@ -26,7 +26,7 @@ int main() {
         players[1] = new Player(2, 'o');
     else
         //Player pointer points to child
-        players[1] = new RandomPlayer('o', 5);
+        players[1] = new RandomPlayer('o', 7);
 
 
     if(game == 1)
